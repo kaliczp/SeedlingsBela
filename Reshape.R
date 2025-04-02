@@ -1,0 +1,15 @@
+df <- hegy
+ttmp <- colnames(df)
+ttmp[1] <- "Category"
+colnames(df) <- ttmp
+Reshaped <- as.data.frame.table(`colnames<-`(t(df[-1]), df$Category))
+Reshaped <- cbind(Var0 = "hegy", Reshaped)
+for(ttcat in c("domb", "sik", "magan")) {
+    assign("df", get(ttcat))
+    ttmp <- colnames(df)
+    ttmp[1] <- "Category"
+    colnames(df) <- ttmp
+    NewReshaped <- as.data.frame.table(`colnames<-`(t(df[-1]), df$Category))
+    NewReshaped <- cbind(Var0 = ttcat, NewReshaped)
+    Reshaped <- rbind(Reshaped, NewReshaped)
+}
