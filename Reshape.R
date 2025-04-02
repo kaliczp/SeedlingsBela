@@ -16,3 +16,10 @@ for(ttcat in c("domb", "sik", "magan")) {
 names(Reshaped) <- c("Source", "Year", "Type", "Price")
 
 Reshaped$Year <- as.numeric(as.character(Reshaped$Year))
+
+library(ggplot2)
+
+ggplot(data = Reshaped, aes(x=Year, y = Price, group = Type)) + geom_smooth() + facet_wrap(~Type)
+
+ggplot(data = Reshaped, aes(x=Year, y = Price, group = Type)) + geom_point() + geom_smooth(method = "lm") + facet_wrap(~Type)
+
