@@ -1,0 +1,5 @@
+library(readxl)
+hegy <- as.data.frame(read_excel("elemzés árak 2018 EESZT török cikk stathoz.xlsx"))
+domb <- as.data.frame(read_excel("elemzés árak 2018 EESZT török cikk stathoz.xlsx", 2))
+sik <- as.data.frame(read_excel("elemzés árak 2018 EESZT török cikk stathoz.xlsx", 3))
+magan <- as.data.frame(read_excel("elemzés árak 2018 EESZT török cikk stathoz.xlsx", 4))
