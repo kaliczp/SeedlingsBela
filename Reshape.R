@@ -13,3 +13,6 @@ for(ttcat in c("domb", "sik", "magan")) {
     NewReshaped <- cbind(Var0 = ttcat, NewReshaped)
     Reshaped <- rbind(Reshaped, NewReshaped)
 }
+names(Reshaped) <- c("Source", "Year", "Type", "Price")
+
+Reshaped$Year <- as.numeric(as.character(Reshaped$Year))
