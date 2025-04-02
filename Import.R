@@ -3,3 +3,4 @@ hegy <- as.data.frame(read_excel("elemzés árak 2018 EESZT török cikk stathoz
 domb <- as.data.frame(read_excel("elemzés árak 2018 EESZT török cikk stathoz.xlsx", 2))
 sik <- as.data.frame(read_excel("elemzés árak 2018 EESZT török cikk stathoz.xlsx", 3))
 magan <- as.data.frame(read_excel("elemzés árak 2018 EESZT török cikk stathoz.xlsx", 4))
+English <- as.data.frame(read_excel("elemzés árak 2018 EESZT török cikk stathoz.xlsx", 6))
