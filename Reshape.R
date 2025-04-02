@@ -21,5 +21,6 @@ library(ggplot2)
 
 ggplot(data = Reshaped, aes(x=Year, y = Price, group = Type)) + geom_smooth() + facet_wrap(~Type)
 
-ggplot(data = Reshaped, aes(x=Year, y = Price, group = Type)) + geom_point(aes(colour = Source)) + geom_smooth(method = "lm") + facet_wrap(~Type)
+ggplot(data = Reshaped, aes(x=Year, y = Price, group = Type)) + geom_point(aes(colour = Source)) + geom_smooth(method = "lm") + facet_wrap(~Type) +
+    theme(axis.text.x = element_text(angle = 90, vjust = 0.5, hjust=1))
 
