@@ -6,6 +6,7 @@ Selected$Source <- factor(Selected$Source,
                           levels = c("hegy", "domb", "sik", "magan"),
                           labels = c("Mountains", "Hills", "Plains", "Private")
                           )
+Selected$Type <- factor(Selected$Type, labels = c("Q. robur 2/1", "Populus 1/0", "Acer 1/0"))
 
 ggplot(data = Selected, aes(x=Year, y = Price, group = Type)) +
     geom_point(aes(colour = Source)) +
