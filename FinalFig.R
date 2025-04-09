@@ -8,7 +8,8 @@ Selected$Source <- factor(Selected$Source,
                           )
 Selected$Type <- factor(Selected$Type, labels = c("Q. robur 2/1", "Populus 1/0", "Acer 1/0"))
 
-jpeg(width = 15, height = 10, units = "cm", res = 300)
+# jpeg(width = 15, height = 10, units = "cm", res = 300)
+pdf(width = 15 / 2.54, height = 10 / 2.54)
 ggplot(data = Selected, aes(x=Year, y = Price, group = Type)) +
     geom_point(aes(colour = Source)) +
     geom_smooth(method = "lm") +
