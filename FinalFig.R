@@ -7,5 +7,8 @@ Selected$Source <- factor(Selected$Source,
                           labels = c("Mountains", "Hills", "Plains", "Private")
                           )
 
-ggplot(data = Selected, aes(x=Year, y = Price, group = Type)) + geom_point(aes(colour = Source)) + geom_smooth(method = "lm") + facet_wrap(~Type) +
+ggplot(data = Selected, aes(x=Year, y = Price, group = Type)) +
+    geom_point(aes(colour = Source)) +
+    geom_smooth(method = "lm") +
+    facet_wrap(~Type) +
     theme(axis.text.x = element_text(angle = 90, vjust = 0.5, hjust=1))
