@@ -15,5 +15,6 @@ ggplot(data = Selected, aes(x=Year, y = Price, group = Type)) +
     geom_smooth(method = "lm") +
     facet_wrap(~Type) +
     scale_x_continuous(breaks = c(2008, 2010, 2012, 2014, 2016)) +
+    scale_y_continuous(limits = c(0,27)) +
     theme(axis.text.x = element_text(angle = 45, vjust = 1, hjust=1))
 dev.off()
