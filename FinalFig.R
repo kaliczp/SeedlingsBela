@@ -9,8 +9,8 @@ Selected$Source <- factor(Selected$Source,
 Selected$Type <- factor(Selected$Type, labels = c("Quercus robur 2/1", "Populus pubescens 1/0", "Acer spec. 1/0"))
 names(Selected) <- c("Nurseries", "Year", "Type", "Price")
 
-# jpeg(width = 15, height = 10, units = "cm", res = 300)
-pdf(width = 15 / 2.54, height = 10 / 2.54)
+# jpeg(width = 17, height = 10, units = "cm", res = 600)
+pdf(width = 17 / 2.54, height = 10 / 2.54)
 ggplot(data = Selected, aes(x=Year, y = Price, group = Type)) +
     geom_point(aes(colour = Nurseries)) +
     geom_smooth(method = "lm") +
